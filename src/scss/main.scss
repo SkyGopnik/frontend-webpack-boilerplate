@@ -329,7 +329,14 @@ header {
         border: none;
         outline: none;
 
+        cursor: pointer;
+        transition: 1s ease;
+
         color: #ffffff;
+
+        &:hover {
+          opacity: .7;
+        }
       }
     }
   }
