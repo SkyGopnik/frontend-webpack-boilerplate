@@ -9,17 +9,43 @@
     <meta name="author" content="Plamen Nikolov, WeAreAthlon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
       <div class="container">
         <div class="menu">
           <div class="menu__inner">
-            <div class="item">Services</div>
-            <div class="item">About us</div>
-            <img class="logo" src="images/logo.png" alt="" />
-            <div class="item">Work</div>
-            <div class="item">Contacts</div>
+            <div id="mobileMenu" class="mobileMenu">
+              <div id="hamburger" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              <div id="mobileMenu__inner" class="mobileMenu__inner">
+                <div class="wrapper">
+                  <div class="title">Menu</div>
+                  <div class="links">
+                    <a href="#services">Services</a>
+                    <a href="#aboutus">About us</a>
+                    <a href="#work">Work</a>
+                    <a href="#contacts">Contacts</a>
+                  </div>
+                  <div class="contact">
+                    <div class="title">Write us</div>
+                    <a class="email" href="#">itworks@mail.ru</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="item" href="#services">Services</a>
+            <a class="item" href="#aboutus">About us</a>
+            <a href="/">
+              <img class="logo" src="images/logo.png" alt="" />
+            </a>
+            <a class="item" href="#work">Work</a>
+            <a class="item" href="#contacts">Contacts</a>
             <div class="item">
               <span>En</span>
               <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,18 +57,18 @@
       </div>
     </header>
     <main>
-      <section class="services">
+      <section id="services" class="services">
         <div class="container">
           <div class="header-title">ITworks - universal digital studio <span><img src="images/triangleSmallest.png" alt="" />&lt;/it works&gt;</span> we guarantee</div>
           <img src="images/triangleBig.png" alt="" class="triangleBig">
           <img src="images/triangleSmall.png" alt="" class="triangleSmall">
           <div class="list">
             <div class="scrollMenu scrollMenu__pink">
-              <div class="box box__active"></div>
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box"></div>
+              <a href="#services" class="box box__active"></a>
+              <a href="#section-2" class="box"></a>
+              <a href="#section-3" class="box"></a>
+              <a href="#section-4" class="box"></a>
+              <a href="#clients" class="box"></a>
             </div>
             <div class="list__inner">
               <div class="item">
@@ -95,18 +121,18 @@
               </div>
             </div>
             <div class="scrollMenu scrollMenu__blue">
-              <div class="box box__active"></div>
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box"></div>
+              <a href="#services" class="box box__active"></a>
+              <a href="#section-2" class="box"></a>
+              <a href="#section-3" class="box"></a>
+              <a href="#section-4" class="box"></a>
+              <a href="#clients" class="box"></a>
             </div>
           </div>
         </div>
       </section>
-      <section class="about about__blue">
+      <section id="section-2" class="category category__blue">
         <div class="container">
-          <div class="about__inner">
+          <div class="category__inner">
             <img src="images/Phone%20and%20laptop.png" alt="" />
             <div class="content">
               <div class="title">Websites</div>
@@ -120,25 +146,25 @@
               <button>Request</button>
             </div>
             <div class="scrollMenu scrollMenu__blue">
-              <div class="box"></div>
-              <div class="box box__active"></div>
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box"></div>
+              <a href="#services" class="box"></a>
+              <a href="#section-2" class="box box__active"></a>
+              <a href="#section-3" class="box"></a>
+              <a href="#section-4" class="box"></a>
+              <a href="#clients" class="box"></a>
             </div>
           </div>
         </div>
         <img src="images/triangleBigBlue.png" alt="" class="triangle" />
       </section>
-      <section class="about about__pink">
+      <section id="section-3" class="category category__pink">
         <div class="container">
-          <div class="about__inner">
+          <div class="category__inner">
             <div class="scrollMenu scrollMenu__pink">
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box box__active"></div>
-              <div class="box"></div>
-              <div class="box"></div>
+              <a href="#services" class="box"></a>
+              <a href="#section-2" class="box"></a>
+              <a href="#section-3" class="box box__active"></a>
+              <a href="#section-4" class="box"></a>
+              <a href="#clients" class="box"></a>
             </div>
             <div class="content">
               <div class="title">Design</div>
@@ -156,9 +182,9 @@
         </div>
         <img src="images/triangleBigPink.png" alt="" class="triangle" />
       </section>
-      <section class="about about__blue">
+      <section id="section-4" class="category category__blue">
         <div class="container">
-          <div class="about__inner">
+          <div class="category__inner">
             <img src="images/Phone%20and%20laptop.png" alt="" />
             <div class="content">
               <div class="title">Websites</div>
@@ -172,16 +198,161 @@
               <button>Request</button>
             </div>
             <div class="scrollMenu scrollMenu__blue">
-              <div class="box"></div>
-              <div class="box box__active"></div>
-              <div class="box"></div>
-              <div class="box"></div>
-              <div class="box"></div>
+              <a href="#services" class="box"></a>
+              <a href="#section-2" class="box"></a>
+              <a href="#section-3" class="box"></a>
+              <a href="#section-4" class="box box__active"></a>
+              <a href="#clients" class="box"></a>
             </div>
           </div>
         </div>
         <img src="images/triangleBigBlue.png" alt="" class="triangle" />
       </section>
+      <section id="clients" class="clients">
+        <div class="container">
+          <div class="title">Clients who trust us</div>
+          <div class="clients__inner">
+            <div class="scrollMenu scrollMenu__pink">
+              <a href="#services" class="box"></a>
+              <a href="#section-2" class="box"></a>
+              <a href="#section-3" class="box"></a>
+              <a href="#section-4" class="box"></a>
+              <a href="#clients" class="box box__active"></a>
+            </div>
+            <div class="content">
+              <div class="item">
+                <img src="images/clients/1.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/clients/2.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/clients/3.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/clients/4.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/clients/6.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/clients/3.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/clients/5.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/clients/3.png" alt="" />
+              </div>
+            </div>
+            <div class="scrollMenu scrollMenu__blue">
+              <a href="#services" class="box"></a>
+              <a href="#section-2" class="box"></a>
+              <a href="#section-3" class="box"></a>
+              <a href="#section-4" class="box"></a>
+              <a href="#clients" class="box box__active"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="work" class="allWorks">
+        <div class="container">
+          <div class="title">All works</div>
+          <div class="allWorks__inner">
+            <div class="item">
+              <img src="images/works/1.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="images/works/2.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="images/works/3.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="aboutus" class="about">
+        <div class="container">
+          <div class="header-title">About us</div>
+          <div class="about__inner">
+            <div class="item">
+              <div class="title">Responsible</div>
+              <div class="description">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+                Condimentum diam orci pretium
+                a pharetra, feugiat cursus.
+                Dictumst risus, sem egestas. </div>
+            </div>
+            <div class="item">
+              <div class="title">Motivated</div>
+              <div class="description">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+                Condimentum diam orci pretium
+                a pharetra, feugiat cursus.
+                Dictumst risus, sem egestas. </div>
+            </div>
+            <div class="item">
+              <div class="title">Organized</div>
+              <div class="description">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+                Condimentum diam orci pretium
+                a pharetra, feugiat cursus.
+                Dictumst risus, sem egestas. </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer id="contacts" class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="content">
+            <div class="logoWithStay">
+              <div class="logo">
+                <div>
+                  <img src="images/logoWhite.png" alt="" />
+                </div>
+                <div class="links">
+                  <div class="item">
+                    <img src="images/icons/fb.png" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="images/icons/inst.png" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="images/icons/be.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="stay">
+                <div class="title">Stay in touch</div>
+                <label class="input">
+                  <input type="text" placeholder="Your email adress" />
+                  <button>Subscribe</button>
+                </label>
+              </div>
+            </div>
+            <div class="menuWithInfo">
+              <ul class="menu">
+                <li>Services</li>
+                <li>Work</li>
+                <li>About us</li>
+                <li>Contacts</li>
+              </ul>
+              <div class="info">
+                <div class="address">
+                  <div>719 Carmans Road,</div>
+                  <div>Massapequa Park,</div>
+                  <div>New York 11762</div>
+                </div>
+                <div class="email">itworks@gmail.com</div>
+                <div class="phone">+373 78 101 010</div>
+              </div>
+            </div>
+          </div>
+          <div class="copyright">© 2021 ITworks. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
